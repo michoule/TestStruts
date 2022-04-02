@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    /// <summary>
+    /// 自定义结构体，学生信息
+    /// </summary>
     public struct Student
     {
         public int Id;
@@ -32,10 +35,14 @@ namespace ConsoleApp1
                 stu[i].Phone = Console.ReadLine();
             }
 
-            GetStu(stu);
+            GetStu(stu);    //调用方法
 
         }
-        public static void GetStu(Student[] a)
+        /// <summary>
+        /// 创建自定义方法打印结构体数组
+        /// </summary>
+        /// <param name="a"></param>
+        public static void GetStu(Student[] a) 
         {
             Console.WriteLine("序号\t姓名\t性别\t年龄\t联系方式");
             foreach (Student s in a)
